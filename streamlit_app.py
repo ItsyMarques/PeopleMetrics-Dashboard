@@ -30,32 +30,55 @@ st.markdown("""
 # --- DATA PARSING FUNCTIONS (ROBUST) ---
 def parse_messy_table(df, start_keyword, end_condition_func, col_mapping=None):
     """
-    Finds a table inside a messy CSV based on a keyword and extracts it.
+    Finds a table inside a messy sheet based on a keyword and extracts it.
     """
+    if df.empty:
+        return pd.DataFrame()
+        
     # Find start row
-    start_idx = df[df.apply(lambda row: row.astype(str).str.contains(start_keyword, case=False, na=False).any(), axis=1)].index
+    mask = df.apply(lambda row: row.astype(str).str.contains(start_keyword, case=False, na=False).any(), axis=1)
+    start_idx = df[mask].index
     if len(start_idx) == 0:
         return pd.DataFrame()
     
     header_row_idx = start_idx[0] + 1  # Assuming header is immediately after title
+    if header_row_idx >= len(df):
+        return pd.DataFrame()
+        
     header_row = df.iloc[header_row_idx]
     
     # Iterate to find end
     data_rows = []
     for i in range(header_row_idx + 1, len(df)):
         row = df.iloc[i]
+        # Ignore completely empty rows
+        if row.isna().all():
+            continue
         if end_condition_func(row):
             break
         data_rows.append(row)
         
+    if not data_rows:
+        return pd.DataFrame()
+        
     extracted_df = pd.DataFrame(data_rows)
     
     # Handle columns
-    if col_mapping and len(col_mapping) <= extracted_df.shape[1]:
-         extracted_df = extracted_df.iloc[:, :len(col_mapping)]
-         extracted_df.columns = col_mapping
+    if col_mapping:
+         # If the table is shifted right (leading NAs), find the first non-NA column
+         actual_start_col = 0
+         for col in range(header_row.shape[0]):
+             if pd.notna(header_row.iloc[col]):
+                 actual_start_col = col
+                 break
+         
+         extracted_df = extracted_df.iloc[:, actual_start_col : actual_start_col + len(col_mapping)]
+         if extracted_df.shape[1] == len(col_mapping):
+             extracted_df.columns = col_mapping
     else:
-        extracted_df.columns = header_row
+        # Use header row from sheet
+        if extracted_df.shape[1] == len(header_row):
+             extracted_df.columns = header_row
         
     return extracted_df
 
