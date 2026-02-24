@@ -1,0 +1,19 @@
+Unnamed: 0,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4
+,Randstad,,,
+,,,,
+Exit type,Number of exits,Rate vs avg HC,Total empleados,
+Voluntary exit,14,0.252616384,,55.42
+Dismissal,13,0.2345723565,,
+TOTAL,27,0.4871887405,,
+,,,,
+,,,,
+Exit type,Number of exits,Rate vs avg HC,,
+Voluntary exit,14,0.252616384,,
+Disciplinary dismissal,10,0.1804402743,,
+Objective dismissal,3,0.05413208228,,
+TOTAL,27,0.4871887405,,
+,,,,
+Tenure at exit (months),,,,
+Exit timing,Voluntary exits,Avg tenure (months),Min,Max
+During probation period,4,1.2,0,2.5
+After probation period,37,23.4,0.2,107.93

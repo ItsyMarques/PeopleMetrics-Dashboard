@@ -1,0 +1,45 @@
+Leadtech + Beijing Ypuzhuhui,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8
+,,,,,,,,
+Exit type,Number of exits,Rate vs avg HC,Total empleados,722.85,,,,
+Voluntary exit,40,0.05533651518,,,,Deel  11 Dismissal,,
+Dismissal,87,0.1203569205,,,,,,
+TOTAL,127,0.1756934357,,,,,,
+,,,,,,,,
+,,,,,,,,
+Exit type,Number of exits,Rate vs avg HC,,,,,,
+Voluntary exit,40,0.05533651518,,,,,,
+Disciplinary dismissal,59,0.08162135989,,,,,,
+Objective dismissal,28,0.03873556063,,,,,,
+TOTAL,127,0.1756934357,,,,,,
+,,,,,,,,
+Tenure at exit (months),,,,,,,,
+Exit timing,Voluntary exits,Avg tenure (months),Min,Max,,,,
+During probation period,4,1.2,0,2.5,,,,
+After probation period,37,23.4,0.2,107.93,,,,
+,,,,,,,,
+,,,,,,,,
+Voluntary exit per Department (After Probation),,,,,,Voluntary exit per Department (Before Probation),,
+Departamento,Nº bajas voluntarias,Distribution,,,,Departamento,Nº bajas voluntarias,
+CS,6,0.1666666667,,,,IT ,2,0.5
+Project/ Product,12,0.3333333333,,,,Ai Lab,1,0.25
+IT ,6,0.1666666667,,,,"Finance, Legal and Payments",1,0.25
+HR ,4,0.1111111111,,,,Total,4,
+"Finance, Legal and Payments",2,0.05555555556,,,,,,
+DBI,2,0.05555555556,,,,,,
+ORGANIC MARKETING,3,0.08333333333,,,,,,
+PAID MARKETING,1,0.02777777778,,,,,,
+Total,36,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Disciplinary dismissal,,,,,,,,
+Departamento,Nº bajas voluntarias,Distribution,,,,Dismissal during per Department (Before Probation),,
+CS,18,0.4285714286,,,,Departamento,Nº bajas voluntarias,
+IT,8,0.1904761905,,,,RRHH,2,0.04761904762
+Project Product,7,0.1666666667,,,,IT,2,0.04761904762
+"Finance, Legal and Payments",3,0.07142857143,,,,"Finance, Legal and Payments",2,0.04761904762
+DBI,1,0.02380952381,,,,Paid Marketing,2,0.04761904762
+Organic Marketing,2,0.04761904762,,,,Product,4,0.09523809524
+Paid Marketing,1,0.02380952381,,,,DBI,3,0.07142857143
+HR,1,0.02380952381,,,,ASO,1,0.02380952381
+Market Research,1,0.02380952381,,,,Organic Marketing,1,0.02380952381
+Total,42,,,,,Total,17,

@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# Streamlit
+.streamlit/
+
+# Node (from previous react attempt?)
+node_modules/
+dist/
+
+# Excel Temp Files
+~$*
